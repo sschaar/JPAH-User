@@ -46,7 +46,7 @@ public class Users {
         this.surname = surname;
         this.email = email;
 
-        commentsById = new HashSet<>();
+       commentsById = new HashSet<>();
     }
 
     @Override
