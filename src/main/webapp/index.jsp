@@ -1,8 +1,7 @@
-<%@ page import="at.htlklu.entities.Users" %>
-<%@ page import="java.util.List" %>
 <%@ page import="at.htlklu.persistence.Dao" %>
+<%@ page import="at.htlklu.entities.Users" %>
 <%@ page import="at.htlklu.entities.Comment" %>
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,87 +9,106 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<h1><%= "JPAH-User" %>
-</h1>
-<br/>
+
+<%@ include file="header.jsp" %>
+<a name="top"></a>
+
+<br>
+<br>
+
 <%
-        List<Users> usersList = Dao.findAllUsersSortedByName();
-        out.println("<h2>User:</h2>");
-        out.println("<table>");
-
-        out.println("<tr>");
-        out.println("<th> ID </th>");
-        out.println("<th> USERNAME </th>");
-        out.println("<th> PASSWORD </th>");
-        out.println("<th> FIRSTNAME </th>");
-        out.println("<th> SURNAME </th>");
-        out.println("<th> EMAIL </th>");
-        out.println("</tr>");
-
-        for (Users u : usersList) {
-            out.println("<tr>");
-            out.println("<td>" + u.getId() + "</td>");
-            out.println("<td>" + u.getUsername() + "</td>");
-            out.println("<td>" + u.getPassword() + "</td>");
-            out.println("<td>" + u.getFirstname() + "</td>");
-            out.println("<td>" + u.getSurname() + "</td>");
-            out.println("<td>" + u.getEmail() + "</td>");
-            out.println("</tr>");
-        }
-
-        out.println("</table>");
-
-    out.println("<br>");
-    out.println("<br>");
-
-    List<Users> htllist = Dao.findUsersWithHTLEmail();
-    out.println("<h2>User with HTL Email:</h2>");
-    out.println("<table>");
-
-    out.println("<tr>");
-    out.println("<th> ID </th>");
-    out.println("<th> USERNAME </th>");
-    out.println("<th> PASSWORD </th>");
-    out.println("<th> FIRSTNAME </th>");
-    out.println("<th> SURNAME </th>");
-    out.println("<th> EMAIL </th>");
-    out.println("</tr>");
-
-    for (Users u : htllist) {
-        out.println("<tr>");
-        out.println("<td>" + u.getId() + "</td>");
-        out.println("<td>" + u.getUsername() + "</td>");
-        out.println("<td>" + u.getPassword() + "</td>");
-        out.println("<td>" + u.getFirstname() + "</td>");
-        out.println("<td>" + u.getSurname() + "</td>");
-        out.println("<td>" + u.getEmail() + "</td>");
-        out.println("</tr>");
-    }
-
-    out.println("</table>");
-
-    out.println("<br>");
-    out.println("<br>");
-
-    List<Comment> commentList = Dao.findCommentsByUserId(8);
-    out.println("<h2>Comment by ID: </h2>");
-    out.println("<table>");
-
-    out.println("<tr>");
-    out.println("<th> ID </th>");
-    out.println("<th> COMMENT </th>");
-    out.println("<th> USER_ID </th>");
-    out.println("</tr>");
-
-    for (Comment c : commentList) {
-        out.println("<tr>");
-        out.println("<td>" + c.getId() + "</td>");
-        out.println("<td>" + c.getComment() + "</td>");
-        out.println("<td>" + c.getUsersByUserId() + "</td>");
-        out.println("</tr>");
-    }
-
-    out.println("</table>");
+    List<Users> usersList = Dao.findAllUsersSortedByName();
 %>
+<div class="section">
+    <h2>User</h2>
+    <table>
+        <tr>
+            <th> ID</th>
+            <th> USERNAME</th>
+            <th> PASSWORD</th>
+            <th> FIRSTNAME</th>
+            <th> SURNAME</th>
+            <th> EMAIL</th>
+        </tr>
+        <% for (Users u : usersList) { %>
+        <tr>
+            <td><%= u.getId() %>
+            </td>
+            <td><%= u.getUsername() %>
+            </td>
+            <td><%= u.getPassword() %>
+            </td>
+            <td><%= u.getFirstname() %>
+            </td>
+            <td><%= u.getSurname() %>
+            </td>
+            <td><%= u.getEmail() %>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+</div>
+<hr>
+
+<%
+    List<Users> htllist = Dao.findUsersWithHTLEmail();
+%>
+<div class="section">
+    <h2>User with HTL Email</h2>
+    <table>
+        <tr>
+            <th> ID</th>
+            <th> USERNAME</th>
+            <th> PASSWORD</th>
+            <th> FIRSTNAME</th>
+            <th> SURNAME</th>
+            <th> EMAIL</th>
+        </tr>
+        <% for (Users u : htllist) { %>
+        <tr>
+            <td><%= u.getId() %>
+            </td>
+            <td><%= u.getUsername() %>
+            </td>
+            <td><%= u.getPassword() %>
+            </td>
+            <td><%= u.getFirstname() %>
+            </td>
+            <td><%= u.getSurname() %>
+            </td>
+            <td><%= u.getEmail() %>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+</div>
+<hr>
+
+<%
+    List<Comment> commentList = Dao.findCommentsByUserId(8);
+%>
+<div class="section">
+    <h2>Comment by ID</h2>
+    <table>
+        <tr>
+            <th> ID</th>
+            <th> COMMENT</th>
+            <th> USER_ID</th>
+        </tr>
+        <% for (Comment c : commentList) { %>
+        <tr>
+            <td><%= c.getId() %>
+            </td>
+            <td><%= c.getComment() %>
+            </td>
+            <td><%= c.getUsersByUserId() %>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+</div>
+<hr>
+
+
 </body>
 </html>
