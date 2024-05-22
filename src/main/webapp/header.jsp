@@ -12,12 +12,12 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<!-- header.jsp -->
 <div class="header">
-    <a href="#insertComment">insert comment</a>
-    <a href="#top">JPAH-User</a>
-    <a href="#deleteComment">delete comment 2</a>
+    <a href="insertComment.jsp">Insert Comment</a>
+    <a href="index.jsp" id="top"><b>JPAH-User</b></a>
+    <a href="deleteComment.jsp">Delete Comment</a>
 </div>
+
 
 </body>
 </html>

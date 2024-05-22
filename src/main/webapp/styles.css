@@ -19,7 +19,7 @@ h1 {
     width: 100%;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px 0; /* Increased padding for larger header */
+    padding: 20px 0;
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -27,23 +27,29 @@ h1 {
 }
 
 .header a {
-    color: #333; /* Remove the blue color */
+    color: #333;
     text-decoration: none;
     margin: 0 15px;
-    font-size: 20px; /* Slightly larger font size */
+    font-size: 20px;
 }
 
 .header a:hover {
     text-decoration: underline;
 }
 
+/* Make JPAH-User link bold */
+.header #jpahUser {
+    font-weight: bold;
+}
+
 .container {
     margin-top: 80px; /* Increased margin to match larger header */
+    text-align: center; /* Center align the content */
 }
 
 .section {
     display: flex;
-    flex-direction: column; /* Change to column layout */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 20px 0;
@@ -51,7 +57,7 @@ h1 {
 
 h2 {
     color: #555;
-    margin-bottom: 20px; /* Adjusted margin */
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -88,7 +94,13 @@ tr:hover {
     background-color: #f1f1f1;
 }
 
-a {
-    color: inherit; /* Inherit color from parent element */
-    text-decoration: none;
+/* Position input fields */
+.container input[type="text"] {
+    width: calc(100% / 3 - 5px); /* Calculate width for 3 inputs with spacing */
+    margin: 0 5px; /* Add spacing between input fields */
+}
+
+/* Position submit button */
+.container button {
+    margin-top: 10px; /* Add some spacing between input fields and button */
 }

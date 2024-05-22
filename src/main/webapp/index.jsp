@@ -9,10 +9,10 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-
 <%@ include file="header.jsp" %>
-<a name="top"></a>
 
+<!-- Top anchor for scrolling -->
+<a name="top"></a>
 <br>
 <br>
 
@@ -23,12 +23,12 @@
     <h2>User</h2>
     <table>
         <tr>
-            <th> ID</th>
-            <th> USERNAME</th>
-            <th> PASSWORD</th>
-            <th> FIRSTNAME</th>
-            <th> SURNAME</th>
-            <th> EMAIL</th>
+            <th>ID</th>
+            <th>USERNAME</th>
+            <th>PASSWORD</th>
+            <th>FIRSTNAME</th>
+            <th>SURNAME</th>
+            <th>EMAIL</th>
         </tr>
         <% for (Users u : usersList) { %>
         <tr>
@@ -57,12 +57,12 @@
     <h2>User with HTL Email</h2>
     <table>
         <tr>
-            <th> ID</th>
-            <th> USERNAME</th>
-            <th> PASSWORD</th>
-            <th> FIRSTNAME</th>
-            <th> SURNAME</th>
-            <th> EMAIL</th>
+            <th>ID</th>
+            <th>USERNAME</th>
+            <th>PASSWORD</th>
+            <th>FIRSTNAME</th>
+            <th>SURNAME</th>
+            <th>EMAIL</th>
         </tr>
         <% for (Users u : htllist) { %>
         <tr>
@@ -91,9 +91,9 @@
     <h2>Comment by ID</h2>
     <table>
         <tr>
-            <th> ID</th>
-            <th> COMMENT</th>
-            <th> USER_ID</th>
+            <th>ID</th>
+            <th>COMMENT</th>
+            <th>USER_ID</th>
         </tr>
         <% for (Comment c : commentList) { %>
         <tr>
