@@ -21,5 +21,8 @@ public class LoginHandler {
 
         System.out.println("deleteCommentsByUserId");
         Dao.deleteCommentsByUserId(10);
+
+        System.out.println("checkPassword");
+        System.out.println(Dao.checkPassword("VMühleder", "ssoru128"));
     }
 }

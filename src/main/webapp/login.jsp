@@ -2,25 +2,28 @@
   Created by IntelliJ IDEA.
   User: stefa
   Date: 22.05.2024
-  Time: 09:11
+  Time: 21:32
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>deleteComment</title>
+    <title>Login</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 <%@ include file="header.jsp" %>
-<a name="deleteComment"></a>
+
 <div class="container">
-    <h2>Delete Comments</h2>
-    <form action="deleteComment" method="get">
-        <input type="text" id="userId" name="userId" placeholder="user id" required>
+    <h2>Login</h2>
+    <form action="LoginServlet" method="post">
+        <input type="text" id="username" name="username" placeholder="Username" required>
         <br>
-        <button type="submit">delete</button>
+        <input type="text" id="password" name="password" placeholder="Password" required>
+        <br>
+        <button type="submit">Login</button>
     </form>
 </div>
+
 </body>
 </html>

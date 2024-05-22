@@ -18,7 +18,7 @@
 <div class="container">
     <h2>Insert Comment</h2>
     <form action="insertComment" method="get">
-        <input type="text" id="firstname" name="firstname" placeholder="first name" required>
+        <input type="text" id="firstname" name="firstname" placeholder="firstname" required>
         <br>
         <input type="text" id="surname" name="surname" placeholder="surname" required>
         <br>

@@ -13,11 +13,15 @@
 </head>
 <body>
 <div class="header">
-    <a href="insertComment.jsp">Insert Comment</a>
-    <a href="index.jsp" id="top"><b>JPAH-User</b></a>
-    <a href="deleteComment.jsp">Delete Comment</a>
+    <div class="nav-links">
+        <a href="insertComment.jsp">Insert Comment</a>
+        <a href="index.jsp" id="jpahUser"><b>JPAH-User</b></a>
+        <a href="deleteComment.jsp">Delete Comment</a>
+    </div>
+    <div class="login-link">
+        <a href="login.jsp">Login</a>
+    </div>
 </div>
-
-
 </body>
 </html>
+

@@ -4,6 +4,8 @@ import at.htlklu.entities.Comment;
 import at.htlklu.entities.Users;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.NoResultException;
+import jakarta.persistence.TypedQuery;
 
 import java.util.List;
 
@@ -36,6 +38,13 @@ public class Dao {
         return em.createQuery("SELECT u.id FROM Users u WHERE u.firstname = :firstname and u.surname = :surname", Integer.class)
                 .setParameter("firstname", firstname)
                 .setParameter("surname", surname)
+                .getSingleResult();
+    }
+
+    public static Integer findUserIdByUsername(String username){
+        EntityManager em = JPAUtil.getEntityManagerFactory().createEntityManager();
+        return em.createQuery("SELECT u.id FROM Users u WHERE u.username = :username", Integer.class)
+                .setParameter("username", username)
                 .getSingleResult();
     }
 
@@ -77,5 +86,22 @@ public class Dao {
         em.close();
     }
 }
+
+    public static boolean checkPassword(String username, String password){
+        EntityManager em = JPAUtil.getEntityManagerFactory().createEntityManager();
+        try {
+            TypedQuery<Users> query = em.createQuery("SELECT u FROM Users u WHERE u.username = :username and u.password = :password", Users.class)
+                    .setParameter("username", username)
+                    .setParameter("password", password);
+
+            Users user = query.getSingleResult();
+
+            return user != null;
+        } catch (NoResultException e) {
+            return false; // Wenn kein Ergebnis gefunden wird, soll statt einer NoResultExeption einfach false heraus kommen
+        } finally {
+            em.close();
+        }
+    }
 
 }
