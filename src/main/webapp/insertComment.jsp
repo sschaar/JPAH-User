@@ -24,7 +24,7 @@
         <br>
         <input type="text" id="comment" name="comment" placeholder="comment" required>
         <br>
-        <button type="submit">Submit</button>
+        <button type="submit">insert</button>
     </form>
 </div>
 

@@ -98,6 +98,8 @@ tr:hover {
 .container input[type="text"] {
     width: calc(100% / 3 - 5px); /* Calculate width for 3 inputs with spacing */
     margin: 0 5px; /* Add spacing between input fields */
+    text-align: center;
+    display: inline-block;
 }
 
 /* Position submit button */
