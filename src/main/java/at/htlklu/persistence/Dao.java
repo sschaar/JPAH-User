@@ -18,8 +18,8 @@ public class Dao {
     // Geben Sie alle Benutzer aus, die eine HTL-Emailadresse haben
     public static List<Users> findUsersWithHTLEmail() {
         EntityManager em = JPAUtil.getEntityManagerFactory().createEntityManager();
-        return em.createQuery("SELECT u FROM Users u WHERE u.email LIKE :emailPattern", Users.class)
-                .setParameter("emailPattern", "@htl-klu.at")
+        return em.createQuery("SELECT u FROM Users u WHERE u.email LIKE :email", Users.class)
+                .setParameter("email", "%@htl-klu.at")
                 .getResultList();
     }
 

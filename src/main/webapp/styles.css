@@ -1,0 +1,48 @@
+/* styles.css */
+
+/* Allgemeine Stile für den Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Stil für die Überschrift */
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+/* Stil für die Tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+/* Stil für Tabellenzeilen und Tabellenzellen */
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Stil für Tabellenüberschriften */
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Abwechselnde Zeilenfarbe für bessere Lesbarkeit */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Stil für Hover-Effekt auf Tabellenzeilen */
+tr:hover {
+    background-color: #f1f1f1;
+}
