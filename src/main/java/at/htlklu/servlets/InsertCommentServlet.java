@@ -14,7 +14,7 @@ public class InsertCommentServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
-        // Retrieve parameters from the request
+
         String firstname = request.getParameter("firstname");
         String surname = request.getParameter("surname");
         String commentText = request.getParameter("comment");

@@ -11,7 +11,6 @@
 <body>
 <%@ include file="header.jsp" %>
 
-<!-- Top anchor for scrolling -->
 <a name="top"></a>
 <br>
 <br>

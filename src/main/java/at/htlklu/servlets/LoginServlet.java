@@ -8,14 +8,13 @@ import jakarta.servlet.annotation.*;
 import java.io.IOException;
 
 @WebServlet(name="LoginServlet", value="/LoginServlet")
-public class LoginServlet extends HttpServlet {
+public class    LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Retrieve parameters from the request
+
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        // Check the user credentials
         boolean isValidUser = Dao.checkPassword(username, password);
 
         if (isValidUser) {
