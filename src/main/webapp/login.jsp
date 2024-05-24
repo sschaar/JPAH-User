@@ -13,7 +13,6 @@
 </head>
 <body>
 <%@ include file="header.jsp" %>
-
 <div class="container">
     <h2>Login</h2>
     <form action="LoginServlet" method="post">
@@ -24,6 +23,5 @@
         <button type="submit">Login</button>
     </form>
 </div>
-
 </body>
 </html>

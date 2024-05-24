@@ -16,7 +16,6 @@
 </head>
 <body>
 <%@ include file="header.jsp" %>
-
 <div class="container">
     <h2>Comments</h2>
     <%
@@ -45,7 +44,6 @@
         }
     %>
 </div>
-
 </body>
 </html>
 
